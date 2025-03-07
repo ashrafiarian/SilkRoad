@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Models</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    body > div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    header {
+      background: linear-gradient(#64b6e6, #e99227 90%);
+      padding: 15px;
+
+      h1 {
+        color: white;
+        font-family: monospace;
+        text-shadow: 1px 1px 2px black;
+        text-align: right;
+      }
+
+      p {
+        color: black;
+        font-family: sans-serif;
+        padding-top: 10px;
+        text-align: left;
+        font-style: italic;
+        font-size: 20px;
+      }
+    }
+
+    footer {
+      background-color: rgb(220, 220, 220);
+      color: #e99227;
+      padding: 15px 15px 10px 15px;
+      text-align: left;
+      margin-top: auto;  /* Pushes the footer to the bottom */
+
+      h5 {
+        margin-bottom: 5px;
+      }
+      p {
+        margin: 0px;
+        color: black;
+        font-size: 15px;
+      }
+    }
+
+    main {
+      flex: 1;  /* This makes the main content area flexible */
+      padding: 20px;
+      background: #ffffff;
+
+      div {
+        height: 100%;
+
+        .row {
+          display: flex; 
+          justify-content: center;
+          height: 100%;
+
+          div {
+            padding: 20px;
+            margin: 0px;
+
+            div[class="inner"] {
+                text-align: center;
+                background-color: rgb(220, 220, 220);;
+                border: 2px solid black;
+                border-radius: 10px;
+            }
+
+            div[class="inner"]:hover {
+                box-shadow: 1px 1px 5px black;
+
+                h2 {
+                  color: #e99227;
+                }
+
+                #regression {
+                  box-shadow: 1px 1px 2px black;
+                }
+                #classification {
+                  box-shadow: 1px 1px 2px black;         
+                }
+                #sentiment_analysis {
+                  box-shadow: 1px 1px 2px black;
+                }
+            }
+          }
+        }
+      }
+    }
+
+    #regression {
+      width: 100%;
+      height: 40%;
+      margin: 10px 0px 15px 0px;
+      border: 1px solid black;
+    }
+
+    #classification {
+      width: 100%;
+      height: 40%;
+      margin: 10px 0px 15px 0px;
+      border: 1px solid black;
+    }
+
+    #sentiment_analysis {
+      width: 100%;
+      height: 40%;
+      margin: 10px 0px 15px 0px;
+      border: 1px solid black;
+    }
+
+    a {
+      color: black;
+    }
+    a:hover {
+      text-decoration: none;
+      
+      p {
+        color: black;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <header>
+      <div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-10">
+                <div>
+                  <h1><strong>SilkRoad</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-10">
+                <div class>
+                  <p>Building AI software for small business</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-10">
+                  <a href="https://www.google.com">
+                    <div class="inner">
+                        <h2>Regression</h2>
+                        <img id="regression" src="{% static 'models/regression.png' %}">
+                        <p>DESCR</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4 col-sm-10">
+                  <a href="{% url 'index' %}">
+                    <div class="inner">
+                        <h2>Classification</h2>
+                        <img id="classification" src="{% static 'models/classification.png' %}">
+                        <p>Classification on MNIST dataset</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-4 col-sm-10">
+                  <a href="https://www.google.com">
+                    <div class="inner">
+                        <h2>Sentiment Analysis</h2>
+                        <img id="sentiment_analysis" src="{% static 'models/sentiment_analysis.png' %}">
+                        <p>Sentiment analysis on IMDb dataset</p>
+                    </div>
+                  </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+      <div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-10">
+                <div>
+                  <h5><strong>Contact</strong></h5>
+                  <p>Email: info@srai.ca</p>
+                  <p>Tel: +1 (647) 574-1380</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-10">
+                <div class>
+                  <h5><strong>Socials</strong></h5>
+                  <p>LinkedIn: [ID]</p>
+                  <p>GitHub: [ID]</p>
+                  <p>HuggingFace: [ID]</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
