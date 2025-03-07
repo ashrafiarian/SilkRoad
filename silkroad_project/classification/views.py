@@ -2,9 +2,15 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    name = ""
+    one = None
+    two = None
+    three = None
     if request.method == "POST":
-        name = request.POST.get("name")
+        one = request.POST.get("1")
+        two = request.POST.get("2")
+        three = request.POST.get("3")
     return render(request, "classification/index.html", {
-        "name": name
+        "one": one,
+        "two": two,
+        "three": three
     })

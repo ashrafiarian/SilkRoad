@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,12 +8,20 @@
     <body>
         <form method="POST">
             {% csrf_token %}
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name">
-            <button type="submit">submit</button> 
+            <button type="submit" name="1" value="1">1</button>
+            <button type="submit" name="2" value="2">2</button>
+            <button type="submit" name="3" value="3">3</button>
         </form>
-
-        <h1>{{ name }}</h1>
         
+        {% if one %}
+            <h2>You pressed {{ one }}</h2>
+        {% elif two %}
+            <h2>You pressed {{ two }}</h2>
+        {% elif three %}
+            <h2>You pressed {{ three }}</h2>
+        {% else %}
+            <h2>You didn't press anything</h2>
+        {% endif %}
+
     </body>
 </html>
