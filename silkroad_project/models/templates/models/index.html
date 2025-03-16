@@ -166,7 +166,7 @@
         <div>
             <div class="row">
                 <div class="col-lg-4 col-sm-10">
-                  <a href="https://www.google.com">
+                  <a href="{% url 'regression:index' %}">
                     <div class="inner">
                         <h2>Regression</h2>
                         <img id="regression" src="{% static 'models/regression.png' %}">
@@ -175,7 +175,7 @@
                   </a>
                 </div>
                 <div class="col-lg-4 col-sm-10">
-                  <a href="{% url 'index' %}">
+                  <a href="{% url 'classification:index' %}">
                     <div class="inner">
                         <h2>Classification</h2>
                         <img id="classification" src="{% static 'models/classification.png' %}">

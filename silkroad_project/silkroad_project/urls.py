@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('models/', include("models.urls")),
+    path('regression/', include("regression.urls")),
     path('classification/', include("classification.urls"))
 ]
