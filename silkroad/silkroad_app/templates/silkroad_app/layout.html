@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'silkroad_app/css/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="body">
+
+        <!--header-->
+        <header>
+            <div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-10">
+                        <div>
+                          <a href="{% url 'index' %}"><h1><strong>SilkRoad</strong></h1></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10">
+                        <div class>
+                          <p>AI software for small business</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </header>
+
+        <!--Main-->
+        {% block content %}
+        {% endblock %}
+
+        <!--Footer-->
+        <footer>
+            <div>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-10">
+                        <div>
+                          <h5><strong>Contact</strong></h5>
+                          <p>Email: info@srai.ca</p>
+                          <p>Tel: +1 (647) 574-1380</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-10">
+                        <div class>
+                          <h5><strong>Socials</strong></h5>
+                          <p>LinkedIn: <a href="https://www.linkedin.com/in/arian-ashrafi-584421302/">https://www.linkedin.com/in/arian-ashrafi-584421302/</a></p>
+                          <p>GitHub: <a href="https://github.com/ashrafiarian/SilkRoad">https://github.com/ashrafiarian/SilkRoad</a></p>
+                          <p>HuggingFace: [ID]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

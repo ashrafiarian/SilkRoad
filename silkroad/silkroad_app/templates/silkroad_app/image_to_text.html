@@ -1,0 +1,66 @@
+{% extends 'silkroad_app/layout.html' %}
+
+{% block title %}Image-to-Text{% endblock %}
+
+{% block content %}
+<style>
+    input {
+        width: 90%;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 10px;
+    }
+</style>
+<main class="model">
+    <div class="row">
+        <div class="col-lg-6 col-sm-10">
+            <div class="column">
+                <h2>Image-to-Text</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input name="address" placeholder="URL Address">
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+                {{ image_to_texted }}
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-10">
+            <div class="column">
+                <h5>Task Description</h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt suscipit eros at bibendum. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Praesent luctus dictum dolor, eu suscipit sem. Duis elit nulla, sodales ac elementum sed, aliquam et dui. 
+                    Praesent ultrices dui ante, at fringilla leo cursus vel. 
+                    Aliquam eleifend, ipsum nec sollicitudin bibendum, leo nunc laoreet nisl, vel tincidunt orci lectus suscipit odio. 
+                    Nulla dolor sem, imperdiet vel sagittis non, tincidunt scelerisque mauris. Aenean rhoncus eleifend neque eget mollis. 
+                    Sed porttitor sollicitudin lorem id posuere. Cras euismod lacinia ipsum. 
+                    Vivamus tortor odio, placerat at convallis vel, porttitor at nunc. 
+                    Duis sagittis, diam vel posuere faucibus, turpis turpis blandit diam, quis imperdiet metus purus sed massa.
+                </p>
+                <h5>Application Usage</h5>
+                <div class="list">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    </ul>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

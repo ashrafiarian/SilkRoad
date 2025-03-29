@@ -1,0 +1,144 @@
+{% extends 'silkroad_app/layout.html' %}
+{% load static %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<!--General Statement-->
+<div id="descr">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt suscipit eros at bibendum. 
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        Praesent luctus dictum dolor, eu suscipit sem. Duis elit nulla, sodales ac elementum sed, aliquam et dui. 
+        Praesent ultrices dui ante, at fringilla leo cursus vel. 
+        Aliquam eleifend, ipsum nec sollicitudin bibendum, leo nunc laoreet nisl, vel tincidunt orci lectus suscipit odio. 
+        Nulla dolor sem, imperdiet vel sagittis non, tincidunt scelerisque mauris. Aenean rhoncus eleifend neque eget mollis. 
+        Sed porttitor sollicitudin lorem id posuere. Cras euismod lacinia ipsum. 
+        Vivamus tortor odio, placerat at convallis vel, porttitor at nunc. 
+        Duis sagittis, diam vel posuere faucibus, turpis turpis blandit diam, quis imperdiet metus purus sed massa.
+        For more info, visit <a href="https://github.com/ashrafiarian/SilkRoad/blob/main/README.md">README.md</a>. 
+    </p>
+</div>
+
+<main id="index">
+    <!--Row 1-->
+    <div class="row">
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'regression' %}">
+                <div class="column">
+                    <h2>Regression</h2>
+                    <img src="{% static 'silkroad_app/regression.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'classification' %}">
+                <div class="column">
+                    <h2>Classification</h2>
+                    <img src="{% static 'silkroad_app/classification.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'sentiment_analysis' %}">
+                <div class="column">
+                    <h2>Sentiment Analysis</h2>
+                    <img src="{% static 'silkroad_app/sentiment_analysis.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'summarization' %}">
+                <div class="column">
+                    <h2>Summarization</h2>
+                    <img src="{% static 'silkroad_app/summarization.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Row 2-->
+    <div class="row">
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'translation' %}">
+                <div class="column">
+                    <h2>Translation</h2>
+                    <img src="{% static 'silkroad_app/translation.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'text_generation' %}">
+                <div class="column">
+                    <h2>Text Generation</h2>
+                    <img src="{% static 'silkroad_app/text_generation.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'fill_mask' %}">
+                <div class="column">
+                    <h2>Fill Mask</h2>
+                    <img src="{% static 'silkroad_app/fill_mask.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'document_q_a' %}">
+                <div class="column">
+                    <h2>Document Q/A</h2>
+                    <img src="{% static 'silkroad_app/document_q_a.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--Row 3-->
+    <div class="row">
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'object_detection' %}">
+                <div class="column">
+                    <h2>Object Detection</h2>
+                    <img src="{% static 'silkroad_app/object_detection.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'image_to_text' %}">
+                <div class="column">
+                    <h2>Image-to-Text</h2>
+                    <img src="{% static 'silkroad_app/image_to_text.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'mask_generation' %}">
+                <div class="column">
+                    <h2>Mask Generation</h2>
+                    <img src="{% static 'silkroad_app/mask_generation.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-10">
+            <a href="{% url 'automatic_speech_recognition' %}">
+                <div class="column">
+                    <h2>Speech Recognition</h2>
+                    <img src="{% static 'silkroad_app/automatic_speech_recognition.png' %}">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
